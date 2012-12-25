@@ -1,0 +1,100 @@
+@import "_bootstrap";
+$lightGray: #999999;
+/* universal */
+
+html{
+	overflow-y: scroll;
+}
+
+/*body{
+	padding-top: 60px;
+}*/
+
+section{
+	overflow: auto;
+}
+
+textarea{
+	resize: vertical;
+}
+
+.center { /* the dot center refers to a class that was defined in the html as <div class="center"></div> */
+	text-align: center;
+	h1{ /* the dot center refers to a class that was defined in the html as <div class="center"></div> */
+	margin-bottom: 10px;
+	}
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6{
+	line-height: 1;
+}
+
+h1{
+	font-size: 3em;
+	letter-spacing: -2px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+h2{
+	font-size: 1.7em;
+	letter-spacing: -1px;
+	margin-bottom: 30px;
+	text-align: normal;
+	color: $lightGray;
+}
+
+p{
+	font-size: 1.1em;
+	line-height: 1.7em;
+}
+
+#logo{/* the id tag which was id ="logo" ...this octothorpe # styles ids */
+	float: left;
+	margin-right: 10px;
+	font-size: 1.7em;
+	color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	padding-top: 9px;
+	font-weight: bold;
+	line-height: 1;
+	&:hover{
+	color: #ffffff;
+	text-decoration: none; /* no underline*/
+	}
+}
+
+/* footer */
+footer{
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #eaeaea;
+	color: $lightGray;
+	a{
+	color: #555;
+		&:hover{
+		color: #222222;
+		}
+	}
+	small{
+		float: left;
+	}
+	ul{
+	float: right;
+	list-style: none;
+	font-size: 0.85em;
+	
+	li{
+		float: left;
+		margin-left: 10px;
+	}
+	}
+
+}
+
+
+
+
