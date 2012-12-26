@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   # All the emails in teh database will get forced downcased
   # This ends here
   validates :name, presence: true, length: {maximum: 50} #nested hash needs curly braces
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[\w+\-.]+\.[a-z]+\z/i
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, format:  { with: VALID_EMAIL_REGEX},
   					uniqueness: { case_sensitive: false}
   validates :password, presence: true, length: {minimum: 6}
