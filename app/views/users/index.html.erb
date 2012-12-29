@@ -1,0 +1,13 @@
+<% provide(:title, 'All users') %>
+<h1>All Users</h1>
+<!-- will paginate looks for an instance variable with the same name as the controller
+in this case the controller is users so it will look for @users from users-contrllers  -->
+<%= will_paginate %>
+<ul class="users">
+	<% @users.all.each do |user| %>
+		<%= render 'user', user: user %>
+	<% end %>
+</ul>
+<%= will_paginate %>
+
+
