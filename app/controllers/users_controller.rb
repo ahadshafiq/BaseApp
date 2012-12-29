@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   end
 
   def update 
-    @user = User.find(params[:id])
+   # @user = User.find(params[:id]) because correct_users runs 'before'
     if @user.update_attributes(params[:user])
       sign_in @user
       # handle a successful update....if you dont have a template you get error
