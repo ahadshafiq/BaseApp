@@ -26,6 +26,10 @@ describe "User pages" do
 	 			end
  			end
  		end	
+
+ 		describe "search" do
+ 			it {should have_selector('div', name: 'search')}
+ 		end
  		
  		describe "delete links" do
  			it { should_not have_link('delete')}

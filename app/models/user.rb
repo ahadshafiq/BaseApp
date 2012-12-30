@@ -39,6 +39,14 @@ class User < ActiveRecord::Base
     Micropost.from_users_followed_by(self)
   end
 
+  def self.search(search)
+    if search
+      where('name LIKE?', "%#{search}%")
+    else
+      scoped
+    end
+  end
+
   private
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
