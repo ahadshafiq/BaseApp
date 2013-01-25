@@ -21,9 +21,6 @@ class User < ActiveRecord::Base
   					uniqueness: { case_sensitive: false}
   validates :password, length: {minimum: 6}
   validates :password_confirmation, presence: true
- 
-  include PgSearch
-  pg_search_scope :search, against: [:name]
   
   def following?(other_user)
     self.relationships.find_by_followed_id(other_user.id)
