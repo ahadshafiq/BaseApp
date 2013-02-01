@@ -1,1 +1,10 @@
-# This is a twitter-like applciation or more generically, a microblogging application.
+This is a generic Base App for social sites
+Todo:
+0. Admin interface and roles
+1. Add internal user messaging
+2. comment threading
+3. email capability
+4. copy copter
+5. internationalization
+
+

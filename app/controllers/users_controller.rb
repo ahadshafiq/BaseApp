@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   	@user  = User.new(params[:user]) #this user matches up from new.html.erb's class of @user
   	if @user.save
       sign_in @user
-  		flash[:success] = "Welcome to the Twitter App"
+  		flash[:success] = "Welcome to the Base App"
   		redirect_to user_path(@user)
   	else
   		render 'new' 
